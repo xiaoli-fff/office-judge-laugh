@@ -1,4 +1,7 @@
 // Make the AI Judge Laugh — office-life one-liner.
+// Revised: punchline moved from the elevator to the coffee machine —
+// the office's real gathering spot, so the literal-compliance turn stays
+// true to office life (judge brief criteria 2-3) instead of random absurdity.
 // Deterministic: one fixed string, no network, no randomness.
 // Writes the entry to $MAKEFUN_OUTPUT_DIR/entry.txt (default /output/entry.txt).
 // Gate: UTF-8 text, 1-200 characters (counted by code point), not only whitespace,
@@ -8,7 +11,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const ENTRY =
-  "My performance review said I need to be more visible, so I moved my desk into the elevator.";
+  "My performance review said I need to be more visible, so I moved my desk next to the coffee machine.";
 
 function fail(message: string): never {
   console.error(`ERROR: ${message}`);
